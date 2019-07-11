@@ -1,6 +1,6 @@
 # Nodejs Script Template
 
-A basic script that offers the possibility of writing JS code in your HTML template.
+A basic script that offers the possibility to writing JS code in your HTML template.
 
 # Example
 
