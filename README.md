@@ -28,6 +28,19 @@ fs.readFile("template.html", "utf8", function(err, data) {
   console.log(output);
 });
 ```
+HTTP server:
+```
+var http = require('http');
+const fs = require('fs');
+const script_tmpl = require('script-tmpl');
+http.createServer(function (req, res) {
+  fs.readFile("template.html", "utf8", function(err, data) {
+    var output = script_tmpl.render(data);
+    res.write(output);
+    res.end();
+  });
+}).listen(8080);
+```
 
 Result:
 ```
