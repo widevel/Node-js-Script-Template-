@@ -19,6 +19,15 @@ template.html
 </html>
 
 ```
+nodejs code:
+```
+const fs = require('fs');
+const script_tmpl = require('script-tmpl');
+fs.readFile("template.html", "utf8", function(err, data) {
+  var output = script_tmpl.render(data);
+  console.log(output);
+});
+```
 
 Result:
 ```
