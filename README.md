@@ -1,7 +1,10 @@
 # Nodejs Script Template
 
 A basic script that offers the possibility to writing JS code in your HTML template.
-
+# Install
+```
+npm install script-tmpl --save
+```
 # Example
 
 template.html
