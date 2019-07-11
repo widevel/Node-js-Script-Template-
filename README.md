@@ -24,8 +24,15 @@ nodejs code:
 const fs = require('fs');
 const script_tmpl = require('script-tmpl');
 fs.readFile("template.html", "utf8", function(err, data) {
-  var output = script_tmpl.render(data);
-  console.log(output);
+  script_tmpl.render(data, function(error, html) {
+    if(error) {
+      console.log(error);
+    } else {
+      console.log(output);
+    }
+    
+  });
+  
 });
 ```
 HTTP server:
@@ -35,9 +42,17 @@ const fs = require('fs');
 const script_tmpl = require('script-tmpl');
 http.createServer(function (req, res) {
   fs.readFile("template.html", "utf8", function(err, data) {
-    var output = script_tmpl.render(data);
-    res.write(output);
-    res.end();
+    script_tmpl.render(data, function(error, html) {
+      if(error) {
+        res.write(error);
+        res.end();
+      } else {
+        res.write(html);
+        res.end();
+      }
+      
+    });
+    
   });
 }).listen(8080);
 ```
