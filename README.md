@@ -141,7 +141,7 @@ script_tmpl.render(data, {'color' : "blue"}, function(error, html) {
 Template:
 ```
 <!NJ>
-echo tmpl_data.color;
+echo(tmpl_data.color);
 <!NJ>
 <!NJ>="Color:"+tmpl_data.color<!NJ>
 ```
