@@ -31,7 +31,7 @@ fs.readFile("template.html", "utf8", function(err, data) {
     if(error) {
       console.log(error);
     } else {
-      console.log(output);
+      console.log(html);
     }
     
   });
