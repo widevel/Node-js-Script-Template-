@@ -1,0 +1,23 @@
+{
+  "name": "script-tmpl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/widevel/Node-js-Script-Template-.git"
+  },
+  "keywords": [
+    "template",
+    "html"
+  ],
+  "author": "Marco iosif",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/widevel/Node-js-Script-Template-/issues"
+  },
+  "homepage": "https://github.com/widevel/Node-js-Script-Template-#readme"
+}
