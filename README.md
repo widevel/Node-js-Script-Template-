@@ -119,7 +119,9 @@ for(i=0;i<10;i++) {
 **Echo function**
 - Show text in the template
 ```
-<!NJ>=echo('hello')<!NJ>
+<!NJ>
+echo('hello');
+<!NJ>
 ```
 ```
 <!NJ>
