@@ -94,3 +94,39 @@ Hello World
 </body>
 </html>
 ```
+# Usage:
+**Single line echo.**
+- Line breaks not allowed
+- no semicolon at the end
+- Equal sign at the beginning is necessary
+```
+<!NJ>="Hello World"<!NJ>
+<!NJ>=Math.random()<!NJ>
+<!NJ>=var_name<!NJ>
+<!NJ>=var_name + "concatenate text"<!NJ>
+```
+**Multi line JS code**
+- Line breaks allowed
+- Any code is allowed
+
+```
+<!NJ>
+for(i=0;i<10;i++) {
+  //Loop
+}
+<!NJ>
+```
+**Echo function**
+- Show text in the template
+```
+<!NJ>
+echo('hello');
+<!NJ>
+```
+```
+<!NJ>
+for(i=0;i<10;i++) {
+  echo("I value:" + i);
+}
+<!NJ>
+```
