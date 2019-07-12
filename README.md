@@ -13,6 +13,7 @@ template.html
 <html>
 <body>
 <!NJ>="Hello World"<!NJ>
+<!NJ>="IP Address:"+tmpl_data.ip<!NJ>
 <!NJ>for(a=0;a<=10;a++) {<!NJ>
 <span>For loop <!NJ>=a<!NJ></span>
 <!NJ>}<!NJ>
@@ -26,8 +27,9 @@ nodejs code:
 ```
 const fs = require('fs');
 const script_tmpl = require('script-tmpl');
+var template_data = {'ip' : '127.0.0.1'};
 fs.readFile("template.html", "utf8", function(err, data) {
-  script_tmpl.render(data, function(error, html) {
+  script_tmpl.render(data, template_data, function(error, html) {
     if(error) {
       console.log(error);
     } else {
@@ -44,8 +46,9 @@ var http = require('http');
 const fs = require('fs');
 const script_tmpl = require('script-tmpl');
 http.createServer(function (req, res) {
+  var template_data = {'ip' : req.connection.remoteAddress};
   fs.readFile("template.html", "utf8", function(err, data) {
-    script_tmpl.render(data, function(error, html) {
+    script_tmpl.render(data, template_data, function(error, html) {
       if(error) {
         res.write(error);
         res.end();
@@ -129,4 +132,16 @@ for(i=0;i<10;i++) {
   echo("I value:" + i);
 }
 <!NJ>
+```
+**Template data**
+```
+script_tmpl.render(data, {'color' : "blue"}, function(error, html) {
+......
+```
+Template:
+```
+<!NJ>
+echo tmpl_data.color;
+<!NJ>
+<!NJ>="Color:"+tmpl_data.color<!NJ>
 ```
