@@ -5,7 +5,7 @@ module.exports = (() => {
 	var output;
 	var eval_str;
 	
-	function render(input, callback) {
+	function render(input, tmpl_data, callback) {
 		
 		output = "";
 		eval_str = "";
